@@ -15,7 +15,7 @@ function preload(){
   fruta3 = loadImage("fruit3.png");
   fruta4 = loadImage("fruit4.png");
   imgFimdeJogo = loadImage("gameover.png")
-  somdaFaca = loadSoud("knifeSwoosh.mp3")
+  somdaFaca = loadSound("knifeSwoosh.mp3")
 
   //som de carregamento aqui
 }
@@ -95,9 +95,8 @@ function Monstro(){
     monstro.addAnimation("moving", imgMonstro);
     monstro.y=Math.round(random(100,550));
     //a atualização abaixo fornece a linha de código para aumentar a velocidade do grupoMostro em 10
-    monstro.velocityX = -8;
+    monstro.velocityX = -(8+placar/10);
     monstro.setLifetime=50;
-    
     grupoMonstro.add(monstro);
   }
 }
